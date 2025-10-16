@@ -2,6 +2,7 @@ export default function Team() {
     const team = [
         { name: "Jun Zaragosa", role: "Project Lead | Developer", linkedInURL: 'https://www.linkedin.com/in/jun-jun-zaragosa/', imgURL: '/images/undraw_chill-guy-avatar_tqsm.svg', },
         { name: "Ton Yacapin", role: "Developer", linkedInURL: 'https://www.linkedin.com/in/angel-hamelton-yacapin-2b8271304/', imgURL: '/images/undraw_developer-avatar_f6ac.svg', },
+        { name: "Francis Alex Darang", role: "Developer", linkedInURL: 'https://www.linkedin.com/in/francisalexdarang/', imgURL: '/images/undraw_fitness-guy-avatar_50y6.svg', },
         { name: "Allen Alvaro", role: "UI/UX Designer", linkedInURL: 'https://www.linkedin.com/in/allenjalvaro/', imgURL: '/images/undraw_friendly-guy-avatar_dqp5.svg', },
     ];
 
