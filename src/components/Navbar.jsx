@@ -1,3 +1,4 @@
+import { ENV } from "../configs/env";
 import { useNavContext } from "../contexts/NavProvider";
 
 
@@ -9,7 +10,7 @@ const Navbar = () => {
             <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
                 <div className="text-2xl font-bold tracking-tight flex gap-x-1.5">
                     <p>{`< >`}</p>
-                    <h1>Chicode</h1>
+                    <h1>{ENV.DEVELOPERS_NAME}</h1>
                 </div>
 
                 {/* Desktop Navigation */}

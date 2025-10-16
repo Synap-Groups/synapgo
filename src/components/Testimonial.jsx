@@ -1,22 +1,24 @@
+import { ENV } from "../configs/env";
+
 export default function Testimonial() {
     const testimonials = [
         {
             name: "Emily Carter",
             role: "Product Manager, NovaTech",
             quote:
-                "Chicode transformed our platform with elegant, reliable code. Their attention to detail and design was unmatched.",
+                `${ENV.DEVELOPERS_NAME} transformed our platform with elegant, reliable code. Their attention to detail and design was unmatched.`,
         },
         {
             name: "Raj Patel",
             role: "Founder, GreenStack",
             quote:
-                "They didn’t just deliver software—they delivered confidence. The Chicode team truly makes a difference.",
+                `They didn’t just deliver software—they delivered confidence. The ${ENV.DEVELOPERS_NAME} team truly makes a difference.`,
         },
         {
             name: "Lena Hoffman",
             role: "CTO, Cloudify",
             quote:
-                "Working with Chicode was seamless from start to finish. They combine creativity, precision, and genuine passion.",
+                `Working with ${ENV.DEVELOPERS_NAME} was seamless from start to finish. They combine creativity, precision, and genuine passion.`,
         },
     ];
 
