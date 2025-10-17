@@ -1,4 +1,12 @@
+import { useContactContext } from "../contexts/ContactProvider";
+
 export default function Contact() {
+    const { contactForm, handleChange, handleSendEmail } = useContactContext();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleSendEmail();
+    }
+
     return (
         <section
             id="contact"
@@ -11,22 +19,35 @@ export default function Contact() {
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
                 {/* Form Section */}
-                <form className="grid gap-4 w-full lg:max-w-lg">
+                <form
+                    onSubmit={handleSubmit}
+                    className="grid gap-4 w-full lg:max-w-lg">
                     <input
+                        value={contactForm.name}
+                        name="name"
+                        onChange={handleChange}
                         type="text"
                         placeholder="Your Name"
                         className="border border-gray-300 rounded p-2 focus:outline-none focus:border-gray-600"
                     />
                     <input
+                        value={contactForm.email}
+                        onChange={handleChange}
+                        name="email"
                         type="email"
                         placeholder="Your Email"
                         className="border border-gray-300 rounded p-2 focus:outline-none focus:border-gray-600"
                     />
                     <textarea
+                        value={contactForm.message}
+                        onChange={handleChange}
+                        name="message"
                         placeholder="Your Message"
                         className="border border-gray-300 rounded p-2 focus:outline-none focus:border-gray-600 h-32"
                     />
-                    <button className="border border-gray-800 bg-gray-900 text-white py-2 rounded hover:bg-black transition">
+                    <button
+                        type="submit"
+                        className="border border-gray-800 bg-gray-900 text-white py-2 rounded hover:bg-black transition">
                         Send Message
                     </button>
                 </form>
