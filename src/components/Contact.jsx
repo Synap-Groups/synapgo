@@ -1,7 +1,9 @@
+import { CheckCircleIcon, ExclamationCircleIcon } from "@heroicons/react/16/solid";
 import { useContactContext } from "../contexts/ContactProvider";
+import Spinner from "./Spinner";
 
 export default function Contact() {
-    const { contactForm, handleChange, handleSendEmail } = useContactContext();
+    const { contactForm, handleChange, handleSendEmail, loading, error, success } = useContactContext();
     const handleSubmit = (e) => {
         e.preventDefault();
         handleSendEmail();
@@ -47,9 +49,25 @@ export default function Contact() {
                     />
                     <button
                         type="submit"
-                        className="border border-gray-800 bg-gray-900 text-white py-2 rounded hover:bg-black transition">
-                        Send Message
+                        className="border border-gray-800 bg-gray-900 text-white py-2 rounded hover:bg-black transition hover:cursor-pointer">
+                        {
+                            loading ? <Spinner /> : "Send"
+                        }
                     </button>
+                    {error
+                        &&
+                        <div className="flex gap-x-2">
+                            <ExclamationCircleIcon className="w-5 h-5 text-red-500" />
+                            <div className="text-red-500 font-semibold text-sm">{error}</div>
+                        </div>
+                    }
+                    {success
+                        &&
+                        <div className="flex gap-x-2">
+                            <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                            <div className="text-green-500-500 font-semibold text-sm">{success}</div>
+                        </div>
+                    }
                 </form>
 
                 {/* Image Section */}

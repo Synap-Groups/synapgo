@@ -10,6 +10,7 @@ const useContact = () => {
     const [contactForm, setContactForm] = useState({ ...formData });
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
+    const [success, setSuccess] = useState();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,9 +21,18 @@ const useContact = () => {
     }
 
     const handleSendEmail = async () => {
-        const response = await sentEmailMessage(contactForm);
-        console.log('response: ', response);
-        return;
+        setLoading(true);
+        try {
+            const response = await sentEmailMessage(contactForm);
+            console.log('response: ', response);
+            setContactForm({ ...formData });
+            setSuccess("Successfully sent query. We'll get in touch to you soon!")
+        } catch (error) {
+            setError(error.message);
+        }
+        finally {
+            setLoading(false);
+        }
     }
 
     return {
@@ -30,7 +40,7 @@ const useContact = () => {
         loading, setLoading,
         error, setError,
         handleSendEmail,
-        handleChange
+        handleChange, success
     }
 };
 
