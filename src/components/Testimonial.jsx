@@ -3,22 +3,28 @@ import { ENV } from "../configs/env";
 export default function Testimonial() {
     const testimonials = [
         {
-            name: "Emily Carter",
+            name: "John Doe",
             role: "Product Manager, NovaTech",
             quote:
                 `${ENV.DEVELOPERS_NAME} transformed our platform with elegant, reliable code. Their attention to detail and design was unmatched.`,
+            image: '/images/clients/undraw3.svg',
+            companyImg: '',
         },
         {
-            name: "Raj Patel",
+            name: "James Smith",
             role: "Founder, GreenStack",
             quote:
                 `They didn’t just deliver software—they delivered confidence. The ${ENV.DEVELOPERS_NAME} team truly makes a difference.`,
+            image: '/images/clients/undraw2.svg',
+            companyImg: '',
         },
         {
-            name: "Lena Hoffman",
-            role: "CTO, Cloudify",
+            name: "Juniper Williams",
+            role: "CTO, Cloudware",
             quote:
                 `Working with ${ENV.DEVELOPERS_NAME} was seamless from start to finish. They combine creativity, precision, and genuine passion.`,
+            image: '/images/clients/undraw1.svg',
+            companyImg: '',
         },
     ];
 
