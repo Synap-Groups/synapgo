@@ -31,6 +31,7 @@ export default function Contact() {
                         type="text"
                         placeholder="Your Name"
                         className="border border-gray-300 rounded p-2 focus:outline-none focus:border-gray-600"
+                        required
                     />
                     <input
                         value={contactForm.email}
@@ -39,6 +40,7 @@ export default function Contact() {
                         type="email"
                         placeholder="Your Email"
                         className="border border-gray-300 rounded p-2 focus:outline-none focus:border-gray-600"
+                        required
                     />
                     <textarea
                         value={contactForm.message}
@@ -46,6 +48,7 @@ export default function Contact() {
                         name="message"
                         placeholder="Your Message"
                         className="border border-gray-300 rounded p-2 focus:outline-none focus:border-gray-600 h-32"
+                        required
                     />
                     <button
                         type="submit"
