@@ -7,7 +7,7 @@ const useNav = () => {
     const links = [
         { id: "about", label: "About" },
         { id: "services", label: "Services" },
-        { id: "members", label: "Teams" },
+        { id: "teams", label: "Teams" },
         { id: "portfolio", label: "Portfolio" },
         { id: "contact", label: "Contact" },
     ];
