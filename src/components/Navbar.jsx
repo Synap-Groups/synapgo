@@ -9,7 +9,8 @@ const Navbar = () => {
         <header className="border-b border-gray-300 sticky top-0 bg-white/90 backdrop-blur z-50">
             <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
                 <div className="text-2xl font-bold tracking-tight flex gap-x-1.5">
-                    <p>{`< >`}</p>
+                    {/* <p>{`< >`}</p> */}
+                    <img src="/logo/logo3.jpg" className="w-9 h-9" />
                     <h1>{ENV.DEVELOPERS_NAME}</h1>
                 </div>
 
